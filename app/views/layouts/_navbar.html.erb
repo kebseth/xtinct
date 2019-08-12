@@ -1,6 +1,9 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <a class="navbar-brand" href="#">
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+  <%= link_to root_path do %>
+    <div class="navbar-brand">
+      <img class="navbar-brand" src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" />
+    </div>
+  <% end %>
 </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -22,7 +25,8 @@
             <a class="dropdown-item" href="#">Profile</a>
             <a class="dropdown-item" href="#">log out</a>
           <% else %>
-            <a class="dropdown-item" href="#">log in</a>
+            <p class="text-center"><%= link_to 'Log in', new_user_session_path %></p>
+            <p class="text-center"><%= link_to 'Sign up', new_user_registration_path %></p>
           <% end %>
         </div>
       </li>
