@@ -10,7 +10,7 @@ gem 'redis'
 
 # our awesome gems
 gem 'devise'
-
+gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
