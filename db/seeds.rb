@@ -1,24 +1,8 @@
 puts 'Cleaning database...'
 Animal.destroy_all
 
-puts 'Creating animals...'
-species_pictures = {
-  'american_lion' => 'link',
-  'bali_tiger' => 'link',
-  'bison_antiquus' => 'link',
-  'california_grizzly_bear' => 'link',
-  'chinese_river_dolphin' => 'link',
-  'dodo' => 'link',
-  'great_auk' => 'link',
-  'hokkaidō_wolf' => 'link',
-  'javan_tiger' => 'link',
-  'pinta_island_tortoise' => 'link',
-  'sabertooth_cat' => 'link',
-  'stellers_sea_cow' => 'link',
-  'tasmanian_tiger' => 'link',
-  'west_african_black_rhino' => 'link',
-  'woolly_mammoth' => 'link'
 
+puts 'Creating animals...'
  Animal.create(
     species: 'American Lion',
     name: 'Hercule',
@@ -30,10 +14,10 @@ species_pictures = {
     of North America at the time, and larger than the saber-toothed cat,
     Smilodon fatalis, which may have weighed up to 280 kg.'
     disponibility: '2019-08-19',
-    photo_url: species_pictures[american_lion],
-    price_per_day: 650
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/american_lion.jpg')),
+    price_per_day: 650,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
  Animal.create(
@@ -46,10 +30,10 @@ species_pictures = {
     The weight of males ranged from 90 to 100 kg,
     and of females from 65 to 80 kg.'
     disponibility: '2019-08-15',
-    photo_url: species_pictures[bali_tiger],
-    price_per_day: 550
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/bali_tiger.jpg')),
+    price_per_day: 550,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
  Animal.create(
@@ -65,10 +49,10 @@ species_pictures = {
     The main purpose of the large and strong horns of this mammal
     is for protection from other animals.'
     disponibility: '2019-08-10',
-    photo_url: species_pictures[bison_antiquus],
-    price_per_day: 900
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/bison_antiquus.jpg')),
+    price_per_day: 900,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -80,10 +64,10 @@ Animal.create(
     Pelage typically, but not exclusively, brownish yellow
     (hence the alternative common name “California golden bear”).'
     disponibility: '2019-08-12',
-    photo_url: species_pictures[california_grizzly_bear],
-    price_per_day: 800
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/california_grizzly_bear.jpg')),
+    price_per_day: 800,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -97,10 +81,10 @@ Animal.create(
     There is no hair found on the Baiji Dolphin and you will notice that
     compared to other dolphins, the eyes are high up on the head.'
     disponibility: '2019-08-11',
-    photo_url: species_pictures[chinese_river_dolphin],
-    price_per_day: 550
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/chinese_river_dolphin.jpg')),
+    price_per_day: 550,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -115,10 +99,10 @@ Animal.create(
     Dodos are perhaps most well-known for their large hooked beaks,
     which were either pale yellow or green in color.'
     disponibility: '2019-08-12',
-    photo_url: species_pictures[dodo],
-    price_per_day: 450
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/dodo.jpg')),
+    price_per_day: 450,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -133,10 +117,10 @@ Animal.create(
     Instead, the great auk is a powerful swimmer,
     a trait that it used in hunting.'
     disponibility: '2019-08-12',
-    photo_url: species_pictures[great_auk],
-    price_per_day: 250
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/great_auk.jpg')),
+    price_per_day: 250,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -152,10 +136,10 @@ Animal.create(
     very lean but exceedingly muscular. Of a grey color in summer and
     greyish white in winter, when his fur is thick and long. '
     disponibility: '2019-08-18',
-    photo_url: species_pictures[hokkaidō_wolf],
-    price_per_day: 500
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/hokkaidō_wolf.jpg')),
+    price_per_day: 500,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -171,10 +155,10 @@ Animal.create(
     be assigned to a distinct species, with the taxonomic
     name Panthera sondaica.'
     disponibility: '2019-08-18',
-    photo_url: species_pictures[javan_tiger],
-    price_per_day: 650
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/javan_tiger.jpg')),
+    price_per_day: 650,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -187,10 +171,10 @@ Animal.create(
     The Pinta Island has a long neck and toothless mouth shaped much
     like a beak, suitable for its vegetarian diet.'
     disponibility: '2019-08-17',
-    photo_url: species_pictures[pinta_island_tortoise],
-    price_per_day: 350
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/pinta_island_tortoise.jpg')),
+    price_per_day: 350,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -207,10 +191,10 @@ Animal.create(
     and broad. The cheek bones are deep and widely arched, the sagittal crest
     is prominent, and the frontal region is slightly convex.'
     disponibility: '2019-08-12',
-    photo_url: species_pictures[sabertooth cat],
-    price_per_day: 650
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/sabertooth_cat.jpg')),
+    price_per_day: 650,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -227,10 +211,10 @@ Animal.create(
     The sea cow also has two keratinous plates located
     on its palate and mandible, used for chewing.'
     disponibility: '2019-08-20',
-    photo_url: species_pictures[stellers_sea_cow],
-    price_per_day: 750
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/stellers_sea_cow.jpg')),
+    price_per_day: 750,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco
-    Nice Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Nice Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -244,10 +228,10 @@ Animal.create(
     There is slight sexual dimorphism with the males being
     larger than females on average.'
     disponibility: '2019-08-19',
-    photo_url: species_pictures[tasmanian_tiger],
-    price_per_day: 80
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/tasmanian_tiger.jpg')),
+    price_per_day: 800,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -261,10 +245,10 @@ Animal.create(
     During the morning or evening, they would browse for food.
     During the hottest parts of the day, they slept or wallowed.'
     disponibility: '2019-08-10',
-    photo_url: species_pictures[west_african_black_rhino],
-    price_per_day: 850
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/west_african_black_rhino.jpg')),
+    price_per_day: 850,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 
 Animal.create(
@@ -276,41 +260,34 @@ Animal.create(
     which was 30 cm on the upper part of the body, up to 90 cm in length on
     the flanks and underside,'
     disponibility: '2019-08-12',
-    photo_url: species_pictures[woolly_mammoth],
-    price_per_day: 1050
+    photo_url: File.open(Rails.root.join('db/fixtures/animals/woolly_mammoth.jpg')),
+    price_per_day: 1050,
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
-    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample,
+    Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
 puts 'Animals created!'
 
 puts 'Creating users...'
-users_pictures = {
-  'nikol' => 'link',
-  'richard' => 'link',
-  'julien' => 'link',
-}
-
 User.create(
     email: 'Nikol@gmail.com',
     encrypted_password: 'password',
     name: 'Nikol'
-    avatar: users_pictures[nikol]
+    avatar: File.open(Rails.root.join('db/fixtures/animals/nikol.jpg')),
   )
 
 User.create(
     email: 'Richard@gmail.com',
     encrypted_password: 'password',
     name: 'Richard'
-    avatar: users_pictures[richard]
+    avatar: File.open(Rails.root.join('db/fixtures/animals/richard.jpg')),
   )
 
 User.create(
     email: 'julien@gmail.com',
     encrypted_password: 'password',
     name: 'Julien'
-    avatar: users_pictures[julien]
+    avatar: File.open(Rails.root.join('db/fixtures/animals/julien.jpg')),
   )
-
 puts 'Users created!'
 
 puts 'Finished!'
