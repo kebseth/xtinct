@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-6 col-xs-10">
-      <h2 class='text-center mt-4 '>Your profile</h2>
+      <h2 class='text-center text-success mt-4 '>Your profile</h2>
       <p> Name : <%= current_user.name %></p>
       <p>Email : <%= current_user.email %></p>
       <p>Avatar :
@@ -13,7 +13,7 @@
       </p>
     </div>
     <div>
-      <h2 class="text-center mt-4  col-sm-6 col-xs-10">Edit your profile</h2>
+      <h2 class="text-center text-success mt-4 col-sm-6 col-xs-10">Edit your profile</h2>
 
       <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
         <%= f.error_notification %>
@@ -39,7 +39,7 @@
         </div>
 
         <div class="form-actions text-center mb-4">
-          <%= f.button :submit, "Update", class:'btn btn-primary btn-lg' %>
+          <%= f.button :submit, "Update", class:'btn btn-success btn-lg' %>
         </div>
       <% end %>
 
