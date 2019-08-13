@@ -22,8 +22,8 @@
         <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="https://kitt.lewagon.com/placeholder/users/ssaunier" />
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <% if user_signed_in? %>
-            <a class="dropdown-item" href="#">Profile</a>
-            <a class="dropdown-item" href="#">log out</a>
+            <p class="text-center"><%= link_to 'Profile', user_session_path %></p>
+            <p class="text-center"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
           <% else %>
             <p class="text-center"><%= link_to 'Log in', new_user_session_path %></p>
             <p class="text-center"><%= link_to 'Sign up', new_user_registration_path %></p>
