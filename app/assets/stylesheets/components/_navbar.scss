@@ -25,10 +25,16 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 60px;
 }
 
-.black-drop{
+.black-drop a{
   color:black;
   font-weight:bold;
+  transition: color 0.2s ease;
+}
+.black-drop a:hover{
+  color:red;
+  text-decoration:none;
+  transition: color 0.2s ease;
 }
