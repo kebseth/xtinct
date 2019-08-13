@@ -4,7 +4,7 @@ class Animal < ApplicationRecord
   belongs_to :owner, class_name: 'User'
 
   validates :species, presence: true
-  validates :names, presence: true
+  validates :name, presence: true
   validates :description, presence: true
   validates :disponibility, presence: true
   validates :photo, presence: true

@@ -1,5 +1,11 @@
 .card-container-home {
-  display: flex;
-  justify-content: space-between;
+  // display: flex;
   margin: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.card-container-home .card-trip {
+  justify-content: space-between;
 }
