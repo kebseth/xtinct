@@ -108,7 +108,7 @@ Animal.create(
 Animal.create(
     species: 'Great Auk',
     name: 'Adolf',
-    description: ' It has a black back and a white belly.
+    description: 'It has a black back and a white belly.
     The black beak is heavy and hooked, with grooves on its surface.
     During summer, great auk plumage showed a white patch over each eye.
     During winter, the great auk lost these patches, instead developing
@@ -257,7 +257,7 @@ Animal.create(
     description: 'This is almost as large as male African elephants,
     which commonly reach a shoulder height of 3–3.4 m.
     The coat consisted of an outer layer of long, coarse "guard hair",
-    which was 30 cm on the upper part of the body, up to 90 cm in length on
+    which is 30 cm on the upper part of the body, up to 90 cm in length on
     the flanks and underside,'
     disponibility: '2019-08-12',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/woolly_mammoth.jpg')),
