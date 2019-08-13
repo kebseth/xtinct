@@ -269,14 +269,14 @@ puts 'Animals created!'
 
 puts 'Creating users...'
 User.create(
-    email: 'Nikol@gmail.com',
+    email: 'nikol@gmail.com',
     encrypted_password: 'password',
     name: 'Nikol'
     avatar: File.open(Rails.root.join('db/fixtures/animals/nikol.jpg')),
   )
 
 User.create(
-    email: 'Richard@gmail.com',
+    email: 'richard@gmail.com',
     encrypted_password: 'password',
     name: 'Richard'
     avatar: File.open(Rails.root.join('db/fixtures/animals/richard.jpg')),
