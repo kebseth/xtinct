@@ -161,7 +161,7 @@ wolf = Animal.create!(
   very lean but exceedingly muscular. Of a grey color in summer and
   greyish white in winter, when his fur is thick and long.',
   disponibility: true,
-  photo: File.open(Rails.root.join('db/fixtures/animals/hokkaidō_wolf.jpg')),
+  photo: File.open(Rails.root.join('db/fixtures/animals/hokkaido_wolf.jpg')),
   price_per_day: 650,
   address: "41-37 Boulevard Albert Einstein, 44300 Nantes"
 )
