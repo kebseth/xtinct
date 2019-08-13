@@ -7,7 +7,7 @@ class Rent < ApplicationRecord
 
   validates :begin_date, presence: true
   validates :end_date, presence: true
-  validate :end_date_after_begin_date
+  validates :end_date_after_begin_date
 
   private
 
