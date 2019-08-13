@@ -1,2 +1,74 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner banner-home" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/user/fridooh);">
+  <div class="container">
+    <h1>Xtinct,<strong> rest your favorite animal</strong>!</h1>
+    <p>Change your life and rent an animal of your choice around the world.</p>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <%= form_tag animals_path, method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              class: "form-control",
+              placeholder: "Find an animal"
+            %>
+            <!-- <%= submit_tag "Search", class: "btn btn-primary" %> -->
+          <% end %>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="text-white form-group col-md-3">
+          <label for="inputdate">From</label>
+          <input type="date" class="form-control" id="inputdate" placeholder="From">
+        </div>
+        <div class="text-white form-group col-md-3">
+          <label for="inputPassword4">To</label>
+          <input type="date" class="form-control" id="inputdate" placeholder="To">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary b-rounded">Rent an animal</button>
+    </form>
+  </div>
+</div>
+
+<div class="card-container-home">
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1490718720478-364a07a997cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1470619549108-b85c56fe5be8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+
+  <div class="card-trip">
+    <img src="https://images.unsplash.com/photo-1504579264001-833438f93df2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" />
+    <div class="card-trip-infos">
+      <div>
+        <h2>Title here</h2>
+        <p>Short description here!</p>
+      </div>
+      <h2 class="card-trip-pricing">£99.99</h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
+</div>
+
+
+
+
+
