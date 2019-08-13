@@ -1,4 +1,8 @@
 class Owner::AnimalsController < ApplicationController
+  def index
+    @animals = current_user.animals
+  end
+
   def new
     @animal = Animal.new
   end
