@@ -35,6 +35,13 @@ Rails.application.configure do
 
   config.action_mailer.perform_caching = false
 
+  # config developpement
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  # config production
+
+  config.action_mailer.default_url_options = { host: 'https://app-3ebadad7-93ad-4e88-b243-8cca9443247d.cleverapps.io/' }
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
