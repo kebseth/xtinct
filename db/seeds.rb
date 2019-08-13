@@ -15,7 +15,7 @@ puts 'Creating animals...'
     Smilodon fatalis, which may have weighed up to 280 kg.'
     disponibility: '2019-08-19',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/american_lion.jpg')),
-    price_per_day: 650,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -31,7 +31,7 @@ puts 'Creating animals...'
     and of females from 65 to 80 kg.'
     disponibility: '2019-08-15',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/bali_tiger.jpg')),
-    price_per_day: 550,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -50,7 +50,7 @@ puts 'Creating animals...'
     is for protection from other animals.'
     disponibility: '2019-08-10',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/bison_antiquus.jpg')),
-    price_per_day: 900,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -65,7 +65,7 @@ Animal.create(
     (hence the alternative common name “California golden bear”).'
     disponibility: '2019-08-12',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/california_grizzly_bear.jpg')),
-    price_per_day: 800,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -82,7 +82,7 @@ Animal.create(
     compared to other dolphins, the eyes are high up on the head.'
     disponibility: '2019-08-11',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/chinese_river_dolphin.jpg')),
-    price_per_day: 550,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -100,7 +100,7 @@ Animal.create(
     which were either pale yellow or green in color.'
     disponibility: '2019-08-12',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/dodo.jpg')),
-    price_per_day: 450,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -118,7 +118,7 @@ Animal.create(
     a trait that it used in hunting.'
     disponibility: '2019-08-12',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/great_auk.jpg')),
-    price_per_day: 250,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -137,7 +137,7 @@ Animal.create(
     greyish white in winter, when his fur is thick and long. '
     disponibility: '2019-08-18',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/hokkaidō_wolf.jpg')),
-    price_per_day: 500,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -156,7 +156,7 @@ Animal.create(
     name Panthera sondaica.'
     disponibility: '2019-08-18',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/javan_tiger.jpg')),
-    price_per_day: 650,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -172,7 +172,7 @@ Animal.create(
     like a beak, suitable for its vegetarian diet.'
     disponibility: '2019-08-17',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/pinta_island_tortoise.jpg')),
-    price_per_day: 350,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -192,7 +192,7 @@ Animal.create(
     is prominent, and the frontal region is slightly convex.'
     disponibility: '2019-08-12',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/sabertooth_cat.jpg')),
-    price_per_day: 650,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -212,7 +212,7 @@ Animal.create(
     on its palate and mandible, used for chewing.'
     disponibility: '2019-08-20',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/stellers_sea_cow.jpg')),
-    price_per_day: 750,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco
     Nice Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -229,7 +229,7 @@ Animal.create(
     larger than females on average.'
     disponibility: '2019-08-19',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/tasmanian_tiger.jpg')),
-    price_per_day: 800,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -246,7 +246,7 @@ Animal.create(
     During the hottest parts of the day, they slept or wallowed.'
     disponibility: '2019-08-10',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/west_african_black_rhino.jpg')),
-    price_per_day: 850,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
@@ -261,7 +261,7 @@ Animal.create(
     the flanks and underside,'
     disponibility: '2019-08-12',
     photo_url: File.open(Rails.root.join('db/fixtures/animals/woolly_mammoth.jpg')),
-    price_per_day: 1050,
+    price_per_day: rand(150...1200),
     address: %w(Nantes Belle-Ile Rennes Paris Toulouse Bordeaux Monaco Nice
     Niort Lille Brest Marseille Lyon Strasbourg Reims).sample
   )
