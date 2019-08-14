@@ -1,26 +1,57 @@
 .footer {
-  background: #F4F4F4;
+  background: #272635;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 100px;
-  padding: 0px 50px;
+  justify-content: space-around;
+  height: 150px;
   color: rgba(0,0,0,0.3);
 }
+
 .footer-links {
   display: flex;
   align-items: center;
 }
+
+.text-uppercase {
+  color : white;
+  font-weight: bold;
+}
+
 .footer-links a {
-  color: black;
-  opacity: 0.15;
+  color: white;
+  opacity: 0.10s;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 35px;
   padding: 0px 10px;
 }
-.footer-links a:hover {
-  opacity: 1;
+
+// .footer-links a:hover {
+//   color: #74A57F;
+// }
+
+.links-text a {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: lighter;
+  color: white;
+  margin: 5px;
 }
-.footer .fa-heart {
-  color: #D23333;
+
+.fab.fa-facebook:hover {
+ color: #4267B2;
 }
+.fab.fa-instagram:hover{
+ background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+ -webkit-background-clip: text;
+         /* Also define standard property for compatibility */
+         background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+.fab.fa-twitter:hover {
+ color: #1EA1F1;
+}
+.fab.fa-linkedin:hover {
+ color: #0077B5;
+}
+
