@@ -4,7 +4,7 @@
       <h1 class="animal-listing-title text-center">BE AMAZED BY OUR EXCTINCT ANIMALS </h1>
       <div class="cards-listing-animals col lg-6">
         <% @animals.each do |animal| %>
-        <%= link_to animals_path(animal) do  %>
+        <%= link_to animal_path(animal) do  %>
           <div class="card-category-animals card-animal mb-3">
             <%= image_tag cl_image_path(animal.photo, height: 600, width: 700, crop: :fill), alt: "alttext" %>
             <div class="card-infos-animals">

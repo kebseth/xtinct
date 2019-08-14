@@ -1,0 +1,39 @@
+<div class="container-animal col-md-4 m-auto d-inline">
+  <div class="row bg-white m-3">
+    <div class="col-sm">
+      <div class="d-flex justify-content-between">
+        <h3 class="card-title text-dark"><strong><%= @animal.name %></strong></h3>
+        <%= image_tag cl_image_path(@animal.owner.avatar), class: "avatar-bordered", alt: "avatar-bordered" %>
+      </div>
+      <div>
+        <h5 class="card-title text-dark"><%= @animal.species %></h5>
+        <p class="card-text text-dark"><%= @animal.description %></p>
+        <p class="card-text text-dark"><strong><%= @animal.price_per_day %> € / day</strong></p>
+      </div>
+    </div>
+    <form action="" class="">
+      <%= image_tag cl_image_path (@animal.photo), height: 450, width: 400, crop: :fill %>
+      <div class="form-row">
+        <div class="text-black form-group col-md-6 text-dark">
+          <label for="inputdate text-dark">From</label>
+          <input type="date" class="form-control" id="inputdate" placeholder="From">
+        </div>
+        <div class="text-black form-group col-md-6 text-dark">
+          <label for="inputdate">To</label>
+          <input type="date" class="form-control" id="inputdate" placeholder="To">
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success b-rounded">Rent animal</button>
+    </form>
+    <div class="col-sm">
+      <div
+        id="map"
+        style="width: 100%;
+        height: 80vh;"
+        data-markers="<%= @markers.to_json %>"
+        data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+    </div>
+  </div>
+</div>
+
