@@ -21,6 +21,7 @@ class AnimalsController < ApplicationController
       lat: @animal.latitude,
       infoWindow: render_to_string(partial: "info_window", locals: { animal: @animal })
     }]
+    @rent = Rent.new
   end
 
   private
