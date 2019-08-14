@@ -1,14 +1,14 @@
-<div class="container">
+<div class="container form_bg rounded">
   <div class="row">
     <div class="col-sm-6 col-xs-10">
       <h2 class='text-center text-success mt-4 '>Your profile</h2>
       <p> Name : <%= current_user.name %></p>
       <p>Email : <%= current_user.email %></p>
       <p>Avatar :
-      <% if current_user.avatar =! '' %>
-      <%= current_user.avatar %>
+      <% if current_user.avatar =! nil %>
+        <%= current_user.avatar %>
       <% else %>
-      <%= "You don't have avatar !" %>
+        <%= "You don't have avatar !" %>
       <% end %>
       </p>
     </div>
@@ -39,15 +39,22 @@
         </div>
 
         <div class="form-actions text-center mb-4">
-          <%= f.button :submit, "Update", class:'btn btn-success btn-lg' %>
+          <div id="container">
+            <button class="learn-more">
+              <div class="circle">
+                <span class="icon arrow"></span>
+              </div>
+              <p class="button-text">Edit</p>
+            </button>
+          </div>
         </div>
       <% end %>
 
-      <h3>Cancel my account</h3>
+      <!-- <h3>Cancel my account</h3> -->
 
-      <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+     <!--  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+      <p class="text-right"><%= link_to "Back", :back %></p>
 
-      <%= link_to "Back", :back %>
     </div>
   </div>
 </div>
