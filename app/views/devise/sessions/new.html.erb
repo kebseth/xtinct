@@ -1,5 +1,5 @@
-<div class="cont d-flex mt-5 rounded">
-  <div class="form_in">
+<div class="cont d-flex mt-5 rounded form_bg">
+  <div class="form_in form_bg">
     <h2 class="text-center text-success mt-4">Login</h2>
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
@@ -42,7 +42,7 @@
           <span class="m--in">Log In</span>
         </div>
       </div>
-    <div>
+    <div class="">
       <%= render "devise/registrations/new" %>
     </div>
   </div>
