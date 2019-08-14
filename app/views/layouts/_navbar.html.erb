@@ -29,7 +29,6 @@
             <p class="text-center black-drop"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
           <% else %>
             <p class="text-center black-drop"><%= link_to 'Log in', new_user_session_path %></p>
-            <p class="text-center black-drop"><%= link_to 'Sign up', new_user_registration_path %></p>
           <% end %>
         </div>
       </li>
