@@ -10,5 +10,4 @@ class User < ApplicationRecord
   has_many :animals, foreign_key: :owner_id
 
   validates :name, presence: true
-  validates :avatar, presence: true
 end
