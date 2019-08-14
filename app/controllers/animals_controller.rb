@@ -1,9 +1,18 @@
 class AnimalsController < ApplicationController
+
   skip_before_action :authenticate_user!, only: [:index, :show]
   before_action :set_animal, only: [:show]
 
   def index
-    @animals = Animal.all
+    if params[:query].present?
+      sql_query = " \
+        animals.species @@ :query \
+        OR animals.address @@ :query \
+      "
+      @animals = Animal.where(sql_query, query: "%#{params[:query]}%")
+    else
+      @animals = Animal.all
+    end
   end
 
   def show
