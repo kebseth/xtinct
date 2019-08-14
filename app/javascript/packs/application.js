@@ -7,5 +7,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 initMapbox();
 
 import { alertDis } from './alertify';
-import { form_toggle } from './_toggle';
+
+import './toggle';
 
