@@ -3,7 +3,8 @@
 
   <%= simple_form_for [:owner, @animal] do |f| %>
     <div class="form-inputs">
-    <%= f.input :species %>
+    <%= f.input :species,
+                input_html: { class: "form-control"} %>
     <%= f.input :name %>
     <%= f.input :description %>
     <%= f.input :address %>

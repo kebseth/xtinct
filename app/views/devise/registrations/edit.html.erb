@@ -5,11 +5,9 @@
       <p> Name : <%= current_user.name %></p>
       <p>Email : <%= current_user.email %></p>
       <p>Avatar :
-      <% if current_user.avatar =! nil %>
-        <%= current_user.avatar %>
-      <% else %>
-        <%= "You don't have avatar !" %>
-      <% end %>
+        <div class='avatar_img'>
+          <%= cl_image_tag(current_user.avatar, height: 360, width: 360, crop: :fill) %>
+        </div>
       </p>
     </div>
     <div>
@@ -36,6 +34,7 @@
                       hint: "we need your current password to confirm your changes",
                       required: true,
                       input_html: { autocomplete: "current-password" } %>
+          <%= f.input :avatar %>
         </div>
 
         <div class="form-actions text-center mb-4">
