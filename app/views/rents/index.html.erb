@@ -1,15 +1,79 @@
-<div class="container">
-  <h1>My rents</h1>
-  <div class="rent-card">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-  <div class="rent-card-infos">
-    <h2>Product name</h2>
-    <p>Product description with <strong>relevant info</strong> only.</p>
+
+<div class="container mt-5">
+<div class="justify-content-center align-items-center d-flex">
+  <div class="mr-3 font-weight-bold">
+   My rent
+  </div>
+<input class="switch" id="check1" type="checkbox"><label for="check1">&nbsp;</label>
+  <div class="font-weight-bold">
+    Bookings
   </div>
 </div>
-  <% current_user.rents.each do |rent| %>
-    <%= rent.animal.owner.name %>
-  <% end %>
 
+  <div id="my_rent" class="there mb-5">
+      <h1>My rents</h1>
+      <% current_user.rents.each do |rent| %>
+        <div class="rent-card mb-3">
+          <div class="h-100 img_rent d-flex align-items-center w-50">
+            <%= cl_image_tag(rent.animal.photo) %>
+            <div class="rent-card-infos">
+              <h2>
+                Owner : <%= rent.animal.owner.name %>
+              </h2>
+              <h5>
+                From <%= rent.begin_date %> , to <%= rent.end_date %>
+              </h5>
+            </div>
+          </div>
+          <div class="d-flex align-items-center justify-content-around w-50">
+            <div>
+              <h2 id="price-rent" class="text-danger"><%= rent.total_price %> €</h2>
+            </div>
+            <div class='operations'>
+              <div class="ml-4">
+                <%= rent.status %>
+              </div>
+              </div>
+            </div>
+        </div>
+      <% end %>
+  </div>
 
+  <div id="my_animal_rent" class="hidden mb-5">
+    <h1>Bookings</h1>
+    <% current_user.bookings.each do |rent| %>
+      <div class="rent-card mb-3">
+        <div class="h-100 img_rent d-flex align-items-center w-50">
+          <%= cl_image_tag(rent.animal.photo) %>
+          <div class="rent-card-infos">
+            <h2>
+              Owner : <%= rent.animal.owner.name %>
+            </h2>
+            <h5>
+              From <%= rent.begin_date %> , to <%= rent.end_date %>
+            </h5>
+          </div>
+        </div>
+        <div class="d-flex align-items-center justify-content-around w-50">
+          <div>
+            <h2 id="price-rent" class="text-danger"><%= rent.total_price %> €</h2>
+          </div>
+          <div class='operations'>
+            <% if rent.status == 'pending' %>
+              <%= link_to accept_rent_path(rent.id), method: :patch do %>
+                <accept class="fancy-button bg-gradient1"><span>Accept</span></accept>
+              <% end %>
+              <%= link_to refuse_rent_path(rent.id), method: :patch do %>
+                <refuse class="fancy-button bg-gradient2"><span>Refuse</span></refuse>
+              <% end %>
+            <% else %>
+            <div class="ml-4">
+              <%= rent.status %>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

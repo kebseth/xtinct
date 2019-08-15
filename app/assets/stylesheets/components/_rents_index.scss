@@ -5,6 +5,7 @@
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
+  border-radius:20px;
 }
 
 .rent-card img {
@@ -12,7 +13,9 @@
   width: 120px;
   object-fit: cover;
 }
-
+.operations{
+  width: 300px;
+}
 .rent-card h2 {
   font-size: 16px;
   font-weight: bold;
@@ -29,4 +32,20 @@
 
 .rent-card .rent-card-infos {
   padding: 16px;
+}
+.list_js{
+  margin-top: 1px;
+  margin-left: 20px;
+  background: white;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+a{
+  color:black;
+}
+
+
+li {
+  list-style:none;
 }

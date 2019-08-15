@@ -5,6 +5,7 @@ class Animal < ApplicationRecord
   mount_uploader :photo, PhotoUploader
 
   belongs_to :owner, class_name: 'User'
+  has_many :rents
 
   validates :species, presence: true
   validates :name, presence: true

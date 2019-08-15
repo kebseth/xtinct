@@ -9,5 +9,6 @@ class User < ApplicationRecord
   has_many :rents, foreign_key: :lodger_id
   has_many :animals, foreign_key: :owner_id
 
+  has_many :bookings, through: :animals, source: :rents
   validates :name, presence: true
 end
