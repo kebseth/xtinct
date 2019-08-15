@@ -1,8 +1,97 @@
 .container-animal {
+  position: relative;
   display: flex;
-  padding: 30px;
+  background-color: white;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  align-items: center;
+  margin: 30px;
+  margin-left: 150px;
+  margin-right: 40px;
+  padding: 2rem 2rem 2rem 0;
 }
 
-.banner-animal {
-  background-image: cover;
+.animal-info {
+  padding: 0 10px 0 10px;
+  margin-left: 250px;
+}
+
+.images-card {
+  display: flex;
+  position: absolute;
+  left: -50px;
+
+  .avatar {
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .image img {
+    border-radius: 10px;
+    box-shadow: -1px 7px 14px -5px ;
+  }
+}
+
+.primary-info {
+  width: 500px;
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  h1 {
+    font-weight: lighter;
+    margin: 10px;
+    color: #5e5e5e;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: lighter;
+    margin: 10px;
+  }
+
+  p {
+    text-align: justify;
+    font-size: 15px;
+    margin: 10px;
+    color: #5e5e5e;
+  }
+
+  .price {
+    color: #8ACB88;
+    font-weight: lighter;
+    font-size: 30px;
+  }
+}
+
+.rent-form {
+  form {
+    color: #5e5e5e;
+    font-weight: lighter;
+  }
+  .form-control-label {
+    margin-left: 5px;
+  }
+  .form-text {
+    margin-left: 5px;
+  }
+  #rent_begin_date {
+    opacity: 0.5;
+  }
+  #rent_end_date {
+    opacity: 0.5;
+  }
+}
+
+.animal-map {
+  width: 100%;
+
+  #map {
+    border-radius: 10px;
+    height: 10%;
+  }
 }
