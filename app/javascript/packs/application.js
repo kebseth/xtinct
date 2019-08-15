@@ -7,3 +7,4 @@ import { alertDis } from './alertify';
 
 import './toggle';
 import '../components/multi_pages';
+import '../plugins/banner';

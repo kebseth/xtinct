@@ -258,6 +258,22 @@ tasmanian_tiger = Animal.create!(
   address: "16 Avenue du Dr Laennec, 44800 Saint-Herblain"
 )
 
+cheetah = Animal.create!(
+  owner: richard,
+  species: 'American Cheetah',
+  name: 'Claudia',
+  description: 'He has a small head and a short muzzle,
+  eyes high and well determined, highlighted by a black line resembling
+  a tear that travels from the inner canthus eyelids to the corner of the
+  lips, and that can differentiate for sure the cheetah of other mottled
+  big cats, such as the leopard. These streaks would improve his vision
+  by minimizing the glare of sunlight.',
+  disponibility: true,
+  photo: File.open(Rails.root.join('db/fixtures/animals/the_american_cheetah.jpg')),
+  price_per_day: 1000,
+  address: "16 rue "
+)
+
 rhino = Animal.create!(
   owner: richard,
   species: 'West African Black Rhino',
