@@ -11,20 +11,7 @@
         <p class="card-text text-dark"><strong><%= @animal.price_per_day %> € / day</strong></p>
       </div>
     </div>
-    <form action="" class="">
-      <%= image_tag cl_image_path (@animal.photo), height: 450, width: 400, crop: :fill %>
-      <div class="form-row">
-        <div class="text-black form-group col-md-6 text-dark">
-          <label for="inputdate text-dark">From</label>
-          <input type="date" class="form-control" id="inputdate" placeholder="From">
-        </div>
-        <div class="text-black form-group col-md-6 text-dark">
-          <label for="inputdate">To</label>
-          <input type="date" class="form-control" id="inputdate" placeholder="To">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-success b-rounded">Rent animal</button>
-    </form>
+      <%= render 'rents/new' %>
     <div class="col-sm">
       <div
         id="map"
