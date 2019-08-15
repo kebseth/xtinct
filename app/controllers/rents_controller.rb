@@ -1,5 +1,8 @@
 class RentsController < ApplicationController
   before_action :set_animal, only: [:new, :create]
+
+  def index
+  end
   def new
     @rent = Rent.new(rent_params)
   end
@@ -25,7 +28,7 @@ class RentsController < ApplicationController
 
   def save_rent
     if @rent.save
-      redirect_to root_path
+      redirect_to rents_path
     else
       render :new
     end
