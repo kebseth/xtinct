@@ -7,7 +7,6 @@
         <%= link_to animal_path(animal) do  %>
           <div class="card-category-animals card-animal mb-3">
             <%= image_tag cl_image_path(animal.photo, height: 600, width: 700, crop: :fill), alt: "alttext" %>
-            <%= link_to ,  %>
             <div class="card-infos-animals">
                 <h2><%= animal.name %></h2>
                 <p><%= animal.species %></p>
