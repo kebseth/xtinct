@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>My rents</h1>
+  <div class="rent-card">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+  <div class="rent-card-infos">
+    <h2>Product name</h2>
+    <p>Product description with <strong>relevant info</strong> only.</p>
+  </div>
+</div>
+  <% current_user.rents.each do |rent| %>
+    <%= rent.animal.owner.name %>
+  <% end %>
+
+
+</div>
