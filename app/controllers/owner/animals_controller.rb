@@ -11,7 +11,7 @@ class Owner::AnimalsController < ApplicationController
     @animal = Animal.new(restaurant_params)
     @animal.owner = current_user
     if @animal.save
-      redirect_to root_path
+      redirect_to owner_animals_path
     else
       render :new
     end
