@@ -6,5 +6,6 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { alertDis } from './alertify';
 
 import './toggle';
-import '../components/multi_pages';
 import '../plugins/banner';
+import '../components/navbar';
+import '../components/multi_pages';
