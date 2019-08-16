@@ -8,7 +8,7 @@ body {
 }
 nav {
   position:fixed;
-  z-index: 1;
+  z-index: 4;
   top: 0;
   left: 0;
   width: 100%;
@@ -58,7 +58,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: black;
   padding: 15px 20px;
   display:block;
   margin:0 .1rem;
@@ -93,6 +93,6 @@ section .content p {
   background: rgba(0,0,0,.9);
 }
 
-.black-drop {
-  color: white;
-}
+// .dropdown-menu-right {
+//   color: white;
+// }
