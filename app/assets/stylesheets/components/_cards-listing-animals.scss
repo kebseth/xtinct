@@ -5,6 +5,12 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 70px;
   border-radius: 3px;
+  padding: 100px
+}
+
+.la-div-animal {
+  display: flex;
+  justify-content: center;
 }
 
 .card-animal {
