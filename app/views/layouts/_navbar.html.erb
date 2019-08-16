@@ -1,31 +1,16 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to root_path do %>
-    <div class="navbar-brand">
-      <img class="navbar-brand" src="https://juliewillems.be/wp-content/uploads/2018/12/charte-animal-respect-2019.png" />
+<div class="container">
+  <nav>
+    <div class="logo">
+      <p class="rootnav"> <%= link_to 'Xctinct', root_path, color:"white"%></p>
     </div>
-  <% end %>
-</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto list-nav">
-      <li class="nav-item">
-        <%= link_to 'Dashboard', rents_path, class: 'whitenav' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Animals', animals_path, class: 'whitenav' %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Add your animal', new_owner_animal_path, class:'whitenav'%>
-      </li>
+    <ul>
+      <li><%= link_to 'Dashboard', rents_path %></li>
+      <li> <%= link_to 'Animals', animals_path %></li>
+      <li><%= link_to 'Add your animal', new_owner_animal_path %></li>
+      <li><%= link_to 'Your animals', owner_animals_path %></li>
       <li class="nav-item dropdown">
-      <li class="nav-item">
-        <%= link_to 'Your animals', owner_animals_path, class:'whitenav'%>
-      </li>
-        <i class="fas fa-bars whitenav" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ></i>
+      <li>
+        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class="fas fa-bars"></i></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <% if user_signed_in? %>
             <p class="text-center black-drop"><%= link_to 'Profile', edit_user_registration_path %></p>
@@ -36,5 +21,5 @@
         </div>
       </li>
     </ul>
-  </div>
+  </nav>
 </div>

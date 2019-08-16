@@ -18,6 +18,7 @@ if(begin != null){
 
 if(end != null){
   end.addEventListener('change', (event) => {
+    const price_for_live = document.getElementById('price_live').innerText;
       if(begin.value != null){
         const price_for_live = document.getElementById('price_live').innerText;
         const date_begin = new Date(begin.value);

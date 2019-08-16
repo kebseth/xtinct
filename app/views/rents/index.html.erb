@@ -38,7 +38,7 @@
       <% end %>
   </div>
 
-  <div id="my_animal_rent" class="there mb-5">
+  <div id="my_animal_rent" class="there mb-5 mt-5">
     <h1>Bookings</h1>
     <% current_user.bookings.order(created_at: :desc).each do |rent| %>
       <div class="rent-card mb-3" >
