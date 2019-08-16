@@ -5,6 +5,6 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { alertDis } from './alertify';
 
-import './toggle';
 import '../components/multi_pages';
+import { calcul_price } from '../components/calcul_price';
 import '../plugins/banner';

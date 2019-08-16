@@ -1,0 +1,6 @@
+const choices = document.querySelector("[data-rent-id='<%= @rent.id %>']")
+choices.parentNode.removeChild(choices);
+const price = document.querySelector("[data-price-id='<%= @rent.id %>']");
+console.log(price);
+const new_html_choices = "<div class='operations d-flex' id='status_operator'><div class='ml-4'><%= @rent.status %></div></div>"
+price.insertAdjacentHTML('afterend', new_html_choices);
