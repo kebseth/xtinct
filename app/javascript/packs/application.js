@@ -5,8 +5,8 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { alertDis } from './alertify';
 
-import '../components/navbar';
 import '../plugins/banner';
+import '../components/navbar';
 import '../components/multi_pages';
 import { calcul_price } from '../components/calcul_price';
 import '../components/login_edit';
