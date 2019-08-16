@@ -1,10 +1,15 @@
-$contfW: 900px;
-$imgfW: 260px;
-$switchfAT: 1.2s;
+$contW: 900px;
+$imgW: 260px;
+$formW: $contW - $imgW;
+$switchAT: 1.2s;
 
-$inputfW: 260px;
+$inputW: 260px;
+$btnH: 36px;
 
-.contaf {
+$diffRatio: ($contW - $imgW) / $contW;
+
+
+.cont {
   overflow: hidden;
   position: relative;
   width: 150vh;
@@ -15,51 +20,24 @@ $inputfW: 260px;
   box-shadow: -1px 7px 14px -5px;
 }
 
-.formf {
+.form {
   position: relative;
-  width: $formfW;
+  width: $formW;
   height: 100%;
+  transition: transform $switchAT ease-in-out;
   padding: 20px 40px 40px 40px;
-
-  h1 {
-  font-size: 30px;
-  text-align: center;
-  }
-
-  input {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
-    text-align: center;
-  }
-
-  label {
-  display: block;
-  width: $inputfW;
-  margin: 25px auto 0;
-  text-align: center;
-
-  span {
-    font-size: 12px;
-    color: #cfcfcf;
-    text-transform: uppercase;
-  }
-}
 }
 
-.sub-contf {
+.sub-cont {
   overflow: hidden;
   position: absolute;
-  left: $formfW;
+  left: $formW;
   top: 0;
-  width: $contfW;
+  width: $contW;
   height: 100%;
-  padding-left: $imgfW;
+  padding-left: $imgW;
   background: #fff;
-  transition: transform $switchfAT ease-in-out;
+  transition: transform $switchAT ease-in-out;
 }
 
 .form-control-file {
@@ -67,7 +45,7 @@ $inputfW: 260px;
   padding-bottom: 0;
 }
 
-.imgf {
+.img {
   position: absolute;
   right: 0;
   top: 0;
@@ -87,5 +65,32 @@ $inputfW: 260px;
   }
 }
 
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+label {
+  display: block;
+  width: $inputW;
+  margin: 25px auto 0;
+  text-align: center;
+
+  span {
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+  }
+}
+
+input {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  text-align: center;
+}
 
 

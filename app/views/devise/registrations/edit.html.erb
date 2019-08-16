@@ -1,59 +1,62 @@
-<div class="container form_bg rounded">
-  <div class="row">
-    <div class="col-sm-6 col-xs-10">
-      <h2 class='text-center text-success mt-4 '>Your profile</h2>
-      <p> Name : <%= current_user.name %></p>
-      <p>Email : <%= current_user.email %></p>
-      <p>Avatar :
-        <div class='avatar_img'>
-          <%= cl_image_tag(current_user.avatar, height: 360, width: 360, crop: :fill) %>
-        </div>
-      </p>
-    </div>
-    <div>
-      <h2 class="text-center text-success mt-4 col-sm-6 col-xs-10">Edit your profile</h2>
-
-      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-        <%= f.error_notification %>
-
-        <div class="form-inputs">
-          <%= f.input :email, required: true, autofocus: true %>
-
-          <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-            <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-          <% end %>
-
-          <%= f.input :password,
-                      hint: "leave it blank if you don't want to change it",
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :password_confirmation,
-                      required: false,
-                      input_html: { autocomplete: "new-password" } %>
-          <%= f.input :current_password,
-                      hint: "we need your current password to confirm your changes",
-                      required: true,
-                      input_html: { autocomplete: "current-password" } %>
-          <%= f.input :avatar %>
-        </div>
-
-        <div class="form-actions text-center mb-4">
-          <div id="container">
-            <button class="learn-more">
-              <div class="circle">
-                <span class="icon arrow"></span>
-              </div>
-              <p class="button-text">Edit</p>
-            </button>
+<div class="container-profile">
+    <div class="row ml-5">
+      <div class="col-sm-6 col-xs-10">
+        <h2 class='text-center mt-4 '>Your profile</h2>
+        <p> Name : <%= current_user.name %></p>
+        <p>Email : <%= current_user.email %></p>
+        <p>Avatar :
+          <div class='avatar_img-profile'>
+            <%= cl_image_tag(current_user.avatar, height: 360, width: 360, crop: :fill) %>
           </div>
-        </div>
-      <% end %>
+        </p>
+      </div>
+    <div>
+        <h2 class="text-center mt-4">Edit your profile</h2>
 
-      <!-- <h3>Cancel my account</h3> -->
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
 
-     <!--  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
-      <p class="text-right"><%= link_to "Back", :back %></p>
+          <div class="form-inputs-profile">
+            <%= f.input :email, required: true, autofocus: true %>
 
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+
+            <%= f.input :password,
+                        hint: "leave it blank if you don't want to change it",
+                        required: false,
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: false,
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :current_password,
+                        hint: "we need your current password to confirm your changes",
+                        required: true,
+                        input_html: { autocomplete: "current-password" } %>
+            <%= f.input :avatar %>
+          </div>
+
+          <div class="form-actions text-center mb-4">
+            <div id="container">
+              <button class="learn-more">
+                <div class="circle">
+                  <span class="icon arrow"></span>
+                </div>
+                <p class="button-text">Edit</p>
+              </button>
+            </div>
+          </div>
+        <% end %>
+
+        <!-- <h3>Cancel my account</h3> -->
+
+       <!--  <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p> -->
+        <p class="text-right"><%= link_to "Back", :back %></p>
+
+      </div>
     </div>
-  </div>
 </div>
+
+
+
