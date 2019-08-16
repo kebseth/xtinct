@@ -20,10 +20,10 @@
     </div>
   </div>
 
-  <div class="container">
-    <div class="row mt-3">
+  <div class="container container-animal">
+    <div class="row mt-3 la-div-animal">
       <div class="col lg-12">
-        <h2 class="animal-listing-title text-center m-4">OUR LAST ADDED ANIMALS</h2>
+        <h1 class="animal-listing-title text-center m-4">OUR LAST ADDED ANIMALS</h1>
         <div class="cards-listing-animals col lg-12">
           <% @animals.each do |animal| %>
             <%= link_to animal_path(animal), class: "text-decoration-none" do  %>

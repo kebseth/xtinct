@@ -1,10 +1,21 @@
 .cards-listing-animals {
-  top: 85px;
+  // top: 85px;
   display: grid;
   justify-content: center;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 70px;
   border-radius: 3px;
+  padding-top: 60px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-bottom: 20px;
+}
+
+.la-div-animal {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  // top: -50px;
 }
 
 .card-animal {
