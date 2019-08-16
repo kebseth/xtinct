@@ -1,15 +1,10 @@
-$contW: 900px;
-$imgW: 260px;
-$formW: $contW - $imgW;
-$switchAT: 1.2s;
+$contfW: 900px;
+$imgfW: 260px;
+$switchfAT: 1.2s;
 
-$inputW: 260px;
-$btnH: 36px;
+$inputfW: 260px;
 
-$diffRatio: ($contW - $imgW) / $contW;
-
-
-.cont {
+.contaf {
   overflow: hidden;
   position: relative;
   width: 150vh;
@@ -20,24 +15,51 @@ $diffRatio: ($contW - $imgW) / $contW;
   box-shadow: -1px 7px 14px -5px;
 }
 
-.form {
+.formf {
   position: relative;
-  width: $formW;
+  width: $formfW;
   height: 100%;
-  transition: transform $switchAT ease-in-out;
   padding: 20px 40px 40px 40px;
+
+  h1 {
+  font-size: 30px;
+  text-align: center;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin-top: 5px;
+    padding-bottom: 5px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.4);
+    text-align: center;
+  }
+
+  label {
+  display: block;
+  width: $inputfW;
+  margin: 25px auto 0;
+  text-align: center;
+
+  span {
+    font-size: 12px;
+    color: #cfcfcf;
+    text-transform: uppercase;
+  }
+}
 }
 
-.sub-cont {
+.sub-contf {
   overflow: hidden;
   position: absolute;
-  left: $formW;
+  left: $formfW;
   top: 0;
-  width: $contW;
+  width: $contfW;
   height: 100%;
-  padding-left: $imgW;
+  padding-left: $imgfW;
   background: #fff;
-  transition: transform $switchAT ease-in-out;
+  transition: transform $switchfAT ease-in-out;
 }
 
 .form-control-file {
@@ -45,7 +67,7 @@ $diffRatio: ($contW - $imgW) / $contW;
   padding-bottom: 0;
 }
 
-.img {
+.imgf {
   position: absolute;
   right: 0;
   top: 0;
@@ -65,32 +87,5 @@ $diffRatio: ($contW - $imgW) / $contW;
   }
 }
 
-h1 {
-  font-size: 30px;
-  text-align: center;
-}
-
-label {
-  display: block;
-  width: $inputW;
-  margin: 25px auto 0;
-  text-align: center;
-
-  span {
-    font-size: 12px;
-    color: #cfcfcf;
-    text-transform: uppercase;
-  }
-}
-
-input {
-  display: block;
-  width: 100%;
-  margin-top: 5px;
-  padding-bottom: 5px;
-  font-size: 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.4);
-  text-align: center;
-}
 
 
