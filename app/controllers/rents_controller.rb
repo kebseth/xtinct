@@ -5,7 +5,7 @@ class RentsController < ApplicationController
 
   def index
     @display_operation = :choose_operation
-    @rents = Rent.all
+    @rents = Rent.all.order(created_at: :desc)
   end
 
   def new
@@ -24,13 +24,19 @@ class RentsController < ApplicationController
   def accept
     @rent.status = "Accepted"
     @rent.save
-    redirect_to rents_path
+    respond_to do |format|
+      format.html { redirect_to rents_path }
+      format.js
+    end
   end
 
   def refuse
     @rent.status = "Refused"
     @rent.save
-    redirect_to rents_path
+    respond_to do |format|
+      format.html { redirect_to rents_path }
+      format.js
+    end
   end
 
   private
