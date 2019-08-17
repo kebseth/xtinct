@@ -13,7 +13,8 @@ $inputfW: 260px;
   background: #fff;
   border-radius: 10px;
   box-shadow: -1px 7px 14px -5px;
-  // top: 100px;s
+  top: 50px;
+  left: -20px;
 }
 
 .formf {
@@ -21,34 +22,35 @@ $inputfW: 260px;
   width: $formfW;
   height: 100%;
   padding: 20px 40px 40px 40px;
+  justify-content: center;
 
-  h1 {
-  font-size: 30px;
-  text-align: center;
-  }
-
-  input {
-    display: block;
-    width: 100%;
-    margin-top: 5px;
-    padding-bottom: 5px;
-    font-size: 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.4);
+    h1 {
+    font-size: 30px;
     text-align: center;
-  }
+    }
 
-  label {
-  display: block;
-  width: $inputfW;
-  margin: 25px auto 0;
-  text-align: center;
+    input {
+      display: block;
+      width: 100%;
+      margin-top: 5px;
+      padding-bottom: 5px;
+      font-size: 16px;
+      border-bottom: 1px solid rgba(0,0,0,0.4);
+      text-align: center;
+    }
 
-  span {
-    font-size: 12px;
-    color: #cfcfcf;
-    text-transform: uppercase;
+    label {
+    display: block;
+    width: $inputfW;
+    margin: 25px auto 0;
+    text-align: center;
+
+    span {
+      font-size: 12px;
+      color: #cfcfcf;
+      text-transform: uppercase;
+    }
   }
-}
 }
 
 .sub-contf {

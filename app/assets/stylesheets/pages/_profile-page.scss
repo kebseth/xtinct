@@ -1,4 +1,5 @@
 .container-profile  {
+  position: relative;
   overflow: hidden;
   width: 80%;
   background: #fff;
@@ -7,6 +8,8 @@
   margin-top: 30px;
   margin-left: 170px;
   margin-bottom: 30px;
+  top: 85px;
+  left: -25px;
 
   h2 {
     font-weight: normal;
@@ -19,7 +22,6 @@
     width: 300px;
     border-radius: 10px;
     box-shadow: -1px 7px 14px -5px;
-
   }
 }
 

@@ -44,6 +44,9 @@ $diffRatio: ($contW - $imgW) / $contW;
   height: 600px;
   margin: 0 auto 100px;
   background: #fff;
+  top: 70px;
+  box-shadow: -1px 7px 10px -5px;
+  border-radius: 10px;
 }
 
 .sub-cont {
