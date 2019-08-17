@@ -13,10 +13,10 @@
         <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" ><i class="fas fa-bars"></i></a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
           <% if user_signed_in? %>
-            <p class="text-center black-drop"><%= link_to 'Profile', edit_user_registration_path %></p>
-            <p class="text-center black-drop"><%= link_to 'Log out', destroy_user_session_path, method: :delete %></p>
+            <p class="text-center black-drop"><%= link_to 'Profile', edit_user_registration_path, class:"profile"%></p>
+            <p class="text-center black-drop"><%= link_to 'Log out', destroy_user_session_path, method: :delete, class:"profile"%></p>
           <% else %>
-            <p class="text-center black-drop"><%= link_to 'Log in', new_user_session_path %></p>
+            <p class="text-center black-drop"><%= link_to 'Log in', new_user_session_path, class:"profile" %></p>
           <% end %>
         </div>
       </li>
