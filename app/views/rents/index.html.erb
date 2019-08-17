@@ -1,5 +1,5 @@
 <div class="container mt-5">
-<div class="justify-content-center align-items-center d-flex">
+<div class="toggle justify-content-center align-items-center d-flex">
   <div class="mr-3 font-weight-bold">
    Bookings
   </div>
@@ -9,7 +9,7 @@
   </div>
 </div>
 
-  <div id="my_rent" class="hidden mb-5">
+  <div id="my_rent" class="hidden pb-5">
       <h1>My rents</h1>
       <% current_user.rents.each do |rent| %>
         <div class="rent-card mb-3">
@@ -38,7 +38,7 @@
       <% end %>
   </div>
 
-  <div id="my_animal_rent" class="there mb-5 mt-5">
+  <div id="my_animal_rent" class="there pb-5">
     <h1>Bookings</h1>
     <% current_user.bookings.order(created_at: :desc).each do |rent| %>
       <div class="rent-card mb-3" >

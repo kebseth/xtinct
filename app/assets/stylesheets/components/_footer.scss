@@ -5,6 +5,8 @@
   justify-content: space-around;
   height: 150px;
   color: rgba(0,0,0,0.3);
+      position: relative;
+    top: 94px;
 }
 
 .footer-links {
@@ -24,10 +26,6 @@
   font-size: 35px;
   padding: 0px 10px;
 }
-
-// .footer-links a:hover {
-//   color: #74A57F;
-// }
 
 .links-text a {
   display: inline-block;
