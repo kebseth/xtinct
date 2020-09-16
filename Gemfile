@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.6.3'
+ruby '2.6.6'
 
 gem 'bootsnap', require: false
 gem 'jbuilder', '~> 2.0'
@@ -10,7 +10,7 @@ gem 'redis'
 
 # our awesome gems
 gem 'devise'
-gem 'cloudinary', '~> 1.9.1'
+gem 'cloudinary', '~> 1.16.0'
 gem 'carrierwave', '~> 1.2'
 gem 'geocoder'
 gem 'pg_search'
